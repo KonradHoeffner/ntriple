@@ -44,7 +44,7 @@ literal -> Literal
 	{
 		let type_lang = match tl {
 			Some(type_lang) => type_lang,
-			None => TypeLang::Type(String::from("https://www.w3.org/2001/XMLSchema#string"))	// a literal without type defaults to string
+			None => TypeLang::Type(String::from("http://www.w3.org/2001/XMLSchema#string"))	// a literal without type defaults to string
 		};
 		Literal {data: lit, data_type: type_lang}
 	}
